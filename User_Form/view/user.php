@@ -1,6 +1,6 @@
 <html>
 
-<form action="/IshmamXamp/Webtech/Project/view/actionpage.php" method="post">
+<form action="actionpage.php" method="post">
 
 
     

@@ -3,11 +3,11 @@
 <body>
 
     <h2>Seller Registration Form</h2>
-    <form method="post">
+    <form method="post" action="actionpage.php">
         <table>
             <tr>
                 <td><label for="full_name">Full Name:</label></td>
-                <td><input type="text" id="full_name" name="full_name"></td>
+                <td><input id="full_name" name="full_name"></td>
             </tr>
             <tr>
                 <td><label for="email">Email:</label></td>
@@ -23,11 +23,11 @@
             </tr>
             <tr>
                 <td><label for="phone_number">Phone Number:</label></td>
-                <td><input type="tel" id="phone_number" name="phone_number"></td>
+                <td><input id="phone_number" name="phone_number"></td>
             </tr>
             <tr>
                 <td><label for="business_name">Business Name:</label></td>
-                <td><input type="text" id="business_name" name="business_name"></td>
+                <td><input id="business_name" name="business_name"></td>
             </tr>
             <tr>
                 <td><label for="store_type">Store Type:</label></td>
