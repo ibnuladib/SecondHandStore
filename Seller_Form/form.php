@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <body>
 
     <h2>Seller Registration Form</h2>
