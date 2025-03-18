@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="../../style/sellerformstyle.css">
+</head>
 <body>
 
-    <h2>Seller Registration Form</h2>
-    <form method="post" action="actionpage.php">
-        <table>
+   
+    
+    <div class="boxdiv">
+        <h2>Seller Registration Form</h2>
+        <form method="post" action="actionpage.php">
+            <table>
             <tr>
                 <td><label for="full_name">Full Name:</label></td>
                 <td><input id="full_name" name="full_name"></td>
@@ -46,8 +52,6 @@
                     <label for="laptops">Laptops</label>
                     <input type="checkbox" id="smartphones" name="categories2" value="Smartphones">
                     <label for="smartphones">Smartphones</label>
-                    <input type="checkbox" id="accessories" name="categories3" value="Accessories">
-                    <label for="accessories">Accessories</label>
                     <input type="checkbox" id="cameras" name="categories4" value="Cameras">
                     <label for="cameras">Cameras</label>
                 </td>
@@ -62,11 +66,11 @@
             </tr>
             <tr>
                 <td>
-                    <input type="submit" value="Register">
+                <input type="submit" value="Register" class="submit-btn">
                 </td>
             </tr>
         </table>
     </form>
-
+    </div>    
 </body>
 </html>
