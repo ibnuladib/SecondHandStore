@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Calculator
+    </title>
+    <link rel="stylesheet" href="Ishmam_stylesheet.css">
+
+</head>
+<body>
+    <div id =calculator >
+        <input id="display" readonly>
+        <div id="buttons">
+            
+            <button id ="fatbutton" class="top" onclick="clearDisplay()">AC</button>
+            <button class="top" onclick="percent()">%</button>
+            <button  id="side" onclick="appendToDisplay('/')">/</button>
+
+            <br>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button id="side" onclick="appendToDisplay('*')">*</button>
+            <br>
+            
+           
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button id="side"onclick="appendToDisplay('-')">-</button>
+            <br>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button id="side" onclick="appendToDisplay('+')">+</button>
+            <br>
+            <button id="fatbutton" onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            
+            <button id="side" onclick="calculate()">=</button>
+            
+
+
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+
+        function appendToDisplay(input){
+            display.value +=input;
+        }
+
+        function clearDisplay(){
+            display.value="";
+        }
+
+        function calculate(){
+            try{            
+                let result = eval(display.value).toFixed(2);
+                display.value=result;
+
+            }
+            catch(error){
+                display.value="Error";
+            }
+        }
+
+        function percent(){
+            val=parseFloat(display.value);
+            if(!isNaN(val)){
+                display.value=val/100;
+
+            }
+            else{
+                display.value="Error";
+            }
+        }
+    </script>
+</body> 
