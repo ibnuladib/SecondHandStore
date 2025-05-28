@@ -1,24 +1,37 @@
+<?php
+setcookie("user","1",time()+86400);
+if(isset($_COOKIE["user"])){
+    echo "Welcome Back";    
+}
+else{
+    echo "Hello!";
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Seller Registration</title>
     <link rel="stylesheet" href="../../style/sellerformstyle.css">
     <?php
-        include "actionpage.php"
+        include "../../control/actionpage.php";
+        $_SESSION["favcolor"]="yellow";
+        //print_r($_SESSION);
     ?>
 </head>
 <body>
     
     <div class="boxdiv">
         <h2>Seller Registration Form</h2>
-        <form method="post" id="sellerForm">
+        <form method="post" id="sellerForm" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td><label for="full_name">Full Name:</label></td>
                     <td>
                         <input id="full_name" name="full_name" >
                         <p id="nameError" class="error"></p>
-<span class="error"><?php echo $fname; ?></span>
+                        <span class="error"><?php echo $fname; ?>
                     </td>
                 </tr>
                 <tr>
@@ -107,6 +120,14 @@
 
                     </td>
                 </tr>
+                <tr>
+                <td>
+                    <td>
+                    <input type="file" name="myfile" id="profile_picture">
+                    <span class="error"><?php echo $fimage; ?></span>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
                         <input type="submit" value="Register" class="submit-btn">

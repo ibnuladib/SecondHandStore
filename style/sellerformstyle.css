@@ -1,69 +1,133 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .body {
     max-width: 600px;
-    margin:auto; 
-    margin-top: 40px;  
-    font-family: Arial;
-    border: 1px solid #fcf9f9;
-    background-color: #384b70;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 15px;
 }
 
-.error{
-    color: red;
-}
-
-.toggle { display: block; }
-
-.boxdiv{
-    background-color: aliceblue;
-    padding: 30px;
+.boxdiv {
+    background-color: #ffffff;
+    padding: 0;
 }
 
 h2 {
-    z-index: 1;
-    margin: 10px 0;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #000;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 8px 0 12px;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 4px;
 }
 
-
 form {
-    overflow: auto;
     display: block;
+    width: 100%;
 }
 
 table {
-    z-index: 2;
+    width: 100%;
     border-collapse: collapse;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
 td {
-    padding: 5px;
-    vertical-align: top;
+    padding: 2px 4px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+td:first-child {
+    width: 35%;
+    white-space: nowrap;
+}
+
+td:last-child {
+    width: 65%;
 }
 
 
-select {
-    display: block;
-    margin: 2px 0;
-    padding: 3px;
-    border: 1px solid #999;
+label {
+    font-weight: 500;
+    color: #222;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 50%;
+    padding: 4px 6px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    margin-bottom: 2px;
 }
 
 textarea {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
+    resize: vertical;
+    min-height: 50px;
+}
+
+input[type="file"] {
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 4px;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 11px;
+    margin-top: 1px;
 }
 
 .submit-btn {
-    text-align: center;
-    position: relative;
-    left: 200px;
-    display: block;
-    margin: 10px auto;
-    padding: 8px 20px;
-    border: 1px #333;
-    background-color: #de1010; 
-    color: white; 
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
     cursor: pointer;
+    font-size: 13px;
+    margin: 10px auto 0;
+    display: block;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.toggle {
+    display: block;
+}
+
+.seller-info {
+        margin-top: 20px;
+}
+.logout-btn {
+        margin-top: -40px;
 }
