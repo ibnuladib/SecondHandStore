@@ -1,0 +1,257 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body{
+    background-color: #384B70 ;
+}
+h1{
+    font-family: "Monoton", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #384B70;
+    text-align: center;
+}
+#motto{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700; 
+    font-size: 30px;
+    color: #FCFAEE;
+    background-color: #384B70;
+    text-align: center
+}
+.firstdiv{
+    background-color: #FCFAEE;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#button{
+    margin-top: 30px;
+    color: #FCFAEE;
+    background-color: #B8001F;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.24s;
+    
+}
+
+#button:hover{
+
+    background-color: #cc5669;
+    
+
+
+}
+
+#button:active{
+    color: #B8001F;
+    background-color: #FCFAEE;
+    border: 2px solid #B8001F;
+}
+
+
+h2{
+    font-family: "Nunito Sans", sans-serif;
+    color: #384B70;
+    font-weight: 700; 
+    font-size: 25px;
+    text-align: center;
+}
+
+.field{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    color: #FCFAEE;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700; 
+    font-size: 40px;
+    text-align: left;
+
+}
+
+.field small
+{
+    color: rgb(253, 0, 0);
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.radio{
+    cursor: pointer;
+}
+
+#DOB{
+    cursor: text;
+}
+.error{
+    color:crimson
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    background-color: #1C1F2B;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    color: #EDEDED;
+}
+
+h1 {
+    font-family: "Monoton", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #1C1F2B;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#motto {
+    font-weight: 600; 
+    font-size: 24px;
+    color: #C0C0C0;
+    background-color: #1C1F2B;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.firstdiv {
+    background-color: #2B2F3C;
+    padding: 30px;
+    margin: auto;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#button {
+    margin-top: 30px;
+    color: #EDEDED;
+    background-color: #B80038;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#button:hover {
+    background-color: #E0004C;
+    transform: translateY(-2px);
+}
+
+#button:active {
+    color: #B80038;
+    background-color: #EDEDED;
+    border: 2px solid #B80038;
+}
+
+h2 {
+    font-weight: 700; 
+    font-size: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.field {
+    font-family: "Nunito Sans", sans-serif;
+    color: #EDEDED;
+}
+
+h3 {
+    color: #EDEDED;
+    font-weight: 700; 
+    font-size: 32px;
+    text-align: left;
+}
+
+.field small {
+    color: crimson;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select {
+    background-color: #1C1F2B;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+    color: #EDEDED;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #B80038;
+}
+
+.radio {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#DOB {
+    cursor: text;
+}
+
+.error {
+    color: #FF5E5E;
+    font-size: 14px;
+}
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#button2 {
+    margin-top: 30px;
+    margin-left: 100px;
+    color: #EDEDED;
+    background-color: #066dc1;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#button2:hover {
+    background-color: #1e85da;
+    transform: translateY(-2px);
+}
+
+#button2:active {
+    color: #066dc1;
+    background-color: #EDEDED;
+    border: 2px solid #066dc1;
+}
+.logininp{
+    margin-left: 10px;
+    width: 250px;
+}
+#cookie{
+    text-align: center ;
+    
+}
