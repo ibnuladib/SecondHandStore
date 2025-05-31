@@ -5,6 +5,8 @@ if (!isset($_SESSION['emailuser'])) {
     die();
 }
 
+$emailUser = $_SESSION['emailuser'];
+
 include '../../model/db.php'; 
 $conn = connectDatabase();
 
@@ -12,7 +14,8 @@ $email = $_POST['email'] ?? '';
 
 $sellerData = null;
 if (!empty($email)) {
-    $sellerData = json_decode(getSellerByEmail($conn, $email), true);
+    $sellerData = getSellerByEmail($conn, $email);
+    //$sellerData = getSellerByEmail($conn, $email), true);
 }
 closeDatabase($conn);
 ?>
@@ -26,7 +29,7 @@ closeDatabase($conn);
 </head>
 <body>
 
-    <h2>Welcome, <?= htmlspecialchars($_SESSION['emailuser']) ?></h2>
+    <h2>Welcome, <?= $_SESSION['emailuser'] ?></h2>
 
     <form method="post">
         <label for="email">Search seller by email:</label>
@@ -38,26 +41,42 @@ closeDatabase($conn);
         <button class="logout-btn" type="submit">Logout</button>
     </form>
 
-    <?php if ($sellerData): ?>
-        <div class="seller-info">
-            <h3>Seller Details:</h3>
-            <?php if (isset($sellerData['error'])): ?>
-                <p><?= htmlspecialchars($sellerData['error']) ?></p>
-            <?php else: ?>
-                <ul>
-                    <?php foreach ($sellerData as $key => $value): ?>
-                        <?php if ($key === 'profile_picture'): ?>
-                            <li>
-                                <strong><?= htmlspecialchars($key) ?>:</strong><br>
-                                <img src="<?= $value ?>" alt="Profile Picture"> 
-                        <?php else: ?>
-                            <li><strong><?= htmlspecialchars($key) ?>:</strong> <?= htmlspecialchars($value) ?></li>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </div>
-    <?php endif; ?>
+    <form method="post" action="delete.php">
+        <button class="logout-btn" type="submit">Delete Account</button>
+    </form>
+
+<form method="get" action="update.php">
+    <input type="hidden" name="email" value="<?= $emailUser ?>">
+    <button class="logout-btn" type="submit">Update Account</button>
+</form>
+
+
+<?php
+if ($sellerData) {
+    echo '<div class="seller-info">';
+    echo '<h3>Seller Details:</h3>';
+
+
+        foreach ($sellerData as $key => $value) {
+            if ($key === 'profile_picture') {
+                echo '<li>';
+                echo '<strong>' . $key. ':</strong><br>';
+                echo '<img src="' . $value . '" alt="Profile Picture">';
+                echo '</li>';
+            } else {
+                echo '<li>';
+                echo '<strong>' . $key . ':</strong> ' . $value;
+                echo '</li>';
+            }
+        }
+
+        echo '</ul>';
+    }
+
+    echo '</div>';
+
+?>
+
 
 
 </body>

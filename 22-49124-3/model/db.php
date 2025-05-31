@@ -31,19 +31,34 @@ function insertData($conn, $full_name, $email, $password, $phone_number, $busine
 }
 
 function getSellerByEmail($conn, $email) {
-    $sql = "SELECT * FROM sellers WHERE email = '$email' LIMIT 1";
+    $sql = "SELECT * FROM sellers WHERE email = '$email'";
     $result = mysqli_query($conn, $sql);
 
     if (!empty($result)) {
-        $seller = mysqli_fetch_object($result);  
-        return json_encode($seller);             
+        $seller = mysqli_fetch_assoc($result);  
+        return $seller;             
     } else {
-        return json_encode(["error" => "Seller not found"]);
+        return ["error" => "Seller not found"];
     }
 }
 
+function updateSeller($conn, $email, $full_name, $phone_number, $business_name, $years_in_business, $business_address) {
+    $sql = "UPDATE sellers SET 
+                full_name = '$full_name',
+                phone_number = '$phone_number',
+                business_name = '$business_name',
+                years_in_business = $years_in_business,
+                business_address = '$business_address'
+            WHERE email = '$email'";
 
+    return mysqli_query($conn, $sql);
 
+}
+
+function deleteSellerByEmail($conn, $email) {
+    $sql = "DELETE FROM sellers WHERE email = '$email'";
+    return mysqli_query($conn, $sql);
+}
 
 
 ?>

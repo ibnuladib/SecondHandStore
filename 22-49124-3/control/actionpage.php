@@ -57,15 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $isFormComplete = false;
     }
 
-    if (
-        (!isset($_POST["categories1"]) || is_null($_POST["categories1"])) &&
-        (!isset($_POST["categories2"]) || is_null($_POST["categories2"])) &&
-        (!isset($_POST["categories4"]) || is_null($_POST["categories4"]))
-    ) {
-        $fcategory = "Please select at least one product category";
-        $isFormComplete = false;
-    }
-
     if (empty($_POST["years_in_business"]) || !ctype_digit($_POST["years_in_business"])) {
         $fyb = "Please enter valid years in business";
         $isFormComplete = false;
@@ -82,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $image_path = "../../images/" . $_POST['email'] . $ext;
         move_uploaded_file($_FILES['myfile']['tmp_name'], $image_path);
     } else {
-        $fimage = "Only JPG and PNG files are allowed.";
+        $fimage = "Image is required";
         $isFormComplete = false;
     }
 
