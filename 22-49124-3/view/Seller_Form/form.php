@@ -30,24 +30,26 @@ else{
                     <td><label for="full_name">Full Name:</label></td>
                     <td>
                         <input id="full_name" name="full_name" >
-                        <p id="nameError" class="error"></p>
                         <span class="error"><?php echo $fname; ?>
+                        <p id="nameError" class="error"></p>
+
                     </td>
                 </tr>
                 <tr>
                      <td><label for="email">Email:</label></td>
                     <td>
-                        <input type="email" id="email" name="email" >
-                        <p id="emailError" class="error"></p>
+                        <input id="email" name="email" >
                         <span class="error"><?php echo $femail; ?>
+                        <p id="emailError" class="error"></p>
+
                     </td>
                 </tr>
                 <tr>
                     <td><label for="password">Password:</label></td>
                     <td>
                         <input type="password" id="password" name="password" >
-                        <p id="passwordError" class="error"></p>
                         <span class="error"><?php echo $fpass; ?>
+                                                <p id="passwordError" class="error"></p>
 
                     </td>
                 </tr>
@@ -62,8 +64,8 @@ else{
                     <td><label for="phone_number">Phone Number:</label></td>
                     <td>
                         <input id="phone_number" name="phone_number">
+                        <span class="error"><?php echo $fphonenum; ?>
                         <p id="phoneError" class="error"></p>
-                        <span class="error"><?php echo $fname; ?>
                     </td>
                 </tr>
                 <tr>
