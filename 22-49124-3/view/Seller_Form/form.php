@@ -72,8 +72,9 @@ else{
                     <td><label for="business_name">Business Name:</label></td>
                     <td>
                         <input id="business_name" name="business_name" >
-                        <p id="businessError" class="error"></p>
                         <span class="error"><?php echo $fbname; ?>
+                        <p id="businessError" class="error"></p>
+
 
                     </td>
                 </tr>
